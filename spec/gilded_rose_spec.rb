@@ -30,6 +30,7 @@ describe GildedRose do
       GildedRose.new(items).update_quality()
       expect(items[0].quality).to eq 0
     end
+  
 
     it 'decreases quality twice as fast for a normal item that has passed sellin' do
       items = [Item.new("foo", -1, 8)]
