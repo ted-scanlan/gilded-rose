@@ -30,7 +30,7 @@ describe GildedRose do
       GildedRose.new(items).update_quality()
       expect(items[0].quality).to eq 0
     end
-  
+
 
     it 'decreases quality twice as fast for a normal item that has passed sellin' do
       items = [Item.new("foo", -1, 8)]
@@ -99,6 +99,34 @@ describe GildedRose do
     GildedRose.new(items).update_quality()
     expect(items[0].sell_in).to eq 0
   end
+
+
+    #conjured items
+    it'decreases sellin by 1' do
+      items = [Item.new("Conjured", 5, 5)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].sell_in).to eq 4
+
+    end
+    it'decreases quality of item by 2' do
+      items = [Item.new("Conjured", 5, 5)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].quality).to eq 3
+    end
+
+    it'The Quality of an item is never negative' do
+      items = [Item.new("Conjured", 5, 0)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].quality).to eq 0
+    end
+
+
+    it 'decreases quality twice as fast when sellin has passed' do
+      items = [Item.new("Conjured", -1, 8)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].quality).to eq 4
+
+    end
 
 
   end

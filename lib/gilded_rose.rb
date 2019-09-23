@@ -11,6 +11,11 @@ class GildedRose
         return if item.quality == 0
         item.sell_in -= 1
 
+        if item.name == "Conjured"
+          item.sell_in < 0 ? item.quality -= 4 : item.quality -= 2
+          return
+        end
+
         if item.name == "Aged Brie"
           return if item.quality >= 50
           item.sell_in < 0 ? item.quality += 2 : item.quality += 1
