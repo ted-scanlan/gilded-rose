@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/Projects/week-10/tech-tests/gilded-rose-2/my-solution/lib/gilded_rose.rb": [
+      "/Users/student/Projects/Projects/week-10/tech-tests/gilded-rose-my-solution/lib/gilded_rose.rb": [
         1,
         null,
         1,
@@ -18,27 +18,24 @@
         10,
         3,
         2,
-        1,
-        null,
-        1,
+        2,
         null,
         null,
         7,
         4,
+        null,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        4,
+        null,
+        null,
         3,
-        1,
-        2,
-        1,
-        null,
-        1,
-        null,
-        null,
-        3,
-        1,
-        null,
-        2,
-        null,
         null,
         null,
         null,
@@ -59,6 +56,6 @@
         null
       ]
     },
-    "timestamp": 1569191085
+    "timestamp": 1569235179
   }
 }
