@@ -1,3 +1,6 @@
+require_relative './Item'
+require_relative './Aged_brie'
+
 class GildedRose
 
   def initialize(items)
@@ -9,18 +12,11 @@ class GildedRose
 
         return if item.name == "Sulfuras, Hand of Ragnaros"
         return if item.quality == 0
+
         item.sell_in -= 1
 
-        if item.name == "Conjured"
-          item.sell_in < 0 ? item.quality -= 4 : item.quality -= 2
-          return
-        end
+    
 
-        if item.name == "Aged Brie"
-          return if item.quality >= 50
-          item.sell_in < 0 ? item.quality += 2 : item.quality += 1
-          return
-        end
 
         if item.name == "Backstage passes to a TAFKAL80ETC concert"
           case item.sell_in
@@ -40,18 +36,4 @@ class GildedRose
 
   end
 end
-end
-
-class Item
-  attr_accessor :name, :sell_in, :quality
-
-  def initialize(name, sell_in, quality)
-    @name = name
-    @sell_in = sell_in
-    @quality = quality
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
-  end
 end

@@ -35,8 +35,11 @@
 
 * I then wrote tests that covered all of the existing legacy code (downloading simplecov to help).
 
-* I then refactored the update_quality method in the ildedRose class, simplyfing the code into a series of if/else statements. This made the code slightly more DRY, as the legacy code was quite repetative, and as a result, twice the length it needed to be. I also added in a few guard clauses at the top of the method which helped to clean things up.
+* I then refactored the update_quality method in the GildedRose class, simplyfing the code into a series of if/else statements. This made the code slightly more DRY, as the legacy code was quite repetative, and as a result, twice the length it needed to be. I also added in a few guard clauses at the top of the method which helped to clean things up.
 
-* I then added tests for the Conjured items and then added code to the update_quality method accordingly. 
+* I then added tests for the Conjured items and then added code to the update_quality method accordingly.
 
-*
+* I then created a new file for the item class. I considered trying to stub out the item class, however I thought it was best to leave mocking until i have fully refactored and I have a clear idea of the different classes and how they work together.
+(the attr of a class should only be written by the owner of that class. If you want to update an attr of a class instance variable, send a request to that class, rather than updating the attr in a different class (i.e. dont have ite,.sell_in in the update method, rather call a method e.g. depreciate, which execites a method in the item class that updates (or if im not allowed to add code to item, another item class that inherits from the main item class)) )
+
+ * I then began to extract a class for each item, with each class inheriting from the item class itself.  

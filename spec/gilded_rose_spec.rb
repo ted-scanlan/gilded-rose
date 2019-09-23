@@ -6,6 +6,7 @@ require_relative '../lib/gilded_rose'
 describe GildedRose do
 
   describe "#update_quality" do
+
     #normal items
     it "does not change the name" do
       items = [Item.new("foo", 0, 0)]
@@ -39,26 +40,7 @@ describe GildedRose do
 
     end
 
-  #Aged Brie
 
-    it'increases the quality of brie by 1' do
-      items = [Item.new("Aged Brie", 5, 5)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 6
-
-    end
-    it'increases the quality of brie by 2 once sell by date has passed' do
-      items = [Item.new("Aged Brie", -5, 5)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 7
-
-    end
-
-    it'quality of an item is never more than 50' do
-      items = [Item.new("Aged Brie", 10, 50)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 50
-    end
 
     #Backstage passes
 
@@ -101,32 +83,6 @@ describe GildedRose do
   end
 
 
-    #conjured items
-    it'decreases sellin by 1' do
-      items = [Item.new("Conjured", 5, 5)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].sell_in).to eq 4
-
-    end
-    it'decreases quality of item by 2' do
-      items = [Item.new("Conjured", 5, 5)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 3
-    end
-
-    it'The Quality of an item is never negative' do
-      items = [Item.new("Conjured", 5, 0)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 0
-    end
-
-
-    it 'decreases quality twice as fast when sellin has passed' do
-      items = [Item.new("Conjured", -1, 8)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 4
-
-    end
 
 
   end
