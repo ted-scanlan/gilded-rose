@@ -42,32 +42,6 @@ describe GildedRose do
 
 
 
-    #Backstage passes
-
-    it 'quality increases by 1 when sellin is over 10 days away' do
-      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 12, 10)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 11
-    end
-
-    it 'quality increases by 2 when sellin is 10 days or less' do
-      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 8, 10)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 12
-    end
-
-    it 'quality increases by 3 when sellin is 5 days or less' do
-      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 4, 10)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 13
-    end
-
-    it 'quality drops to 0 after the concert' do
-      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 0, 10)]
-      GildedRose.new(items).update_quality()
-      expect(items[0].quality).to eq 0
-    end
-
     #sulfuras
 
   it 'never decreases in Quality, and quality is always 80' do
