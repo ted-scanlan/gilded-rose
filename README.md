@@ -59,7 +59,9 @@ bundle install
 
 To run tests
 
-```rspec
+```
+rspec
+
 ```
 
 To run the program
@@ -80,4 +82,18 @@ items = [
 ]
 ```
 
-Then enter the
+Then enter the items into the Gilded Rose:
+
+```
+gilded_rose = GildedRose.new(items)
+
+```
+
+to update the items:
+
+```
+gilded_rose.update_quality
+
+```
+
+(run the 'spec/texttest_fixture.rb' file to see this in action)
