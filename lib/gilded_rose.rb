@@ -10,19 +10,25 @@ class GildedRose
 
   def initialize(items)
     @items = items.map! {|item|
-      if item.name == "Aged Brie"
-        AgedBrie.new(item.name, item.sell_in, item.quality)
-      elsif item.name == "Backstage passes to a TAFKAL80ETC concert"
-        BackstagePasses.new(item.name, item.sell_in, item.quality)
-      elsif item.name == "Conjured"
-        Conjured.new(item.name, item.sell_in, item.quality)
-      elsif item.name == "Sulfuras"
-        Sulfuras.new(item.name, item.sell_in, item.quality)
-      else
-        NormalItem.new(item.name, item.sell_in, item.quality)
-      end
+       find_name(item).new(item.name, item.sell_in, item.quality)
     }
   end
+
+  def find_name(item)
+
+    if item.name == "Aged Brie"
+      AgedBrie
+    elsif item.name == "Backstage passes to a TAFKAL80ETC concert"
+      BackstagePasses
+    elsif item.name == "Conjured"
+      Conjured
+    elsif item.name == "Sulfuras"
+      Sulfuras
+    else
+      NormalItem
+    end
+  end
+
 
   def update_quality
      @items.map {|item|
