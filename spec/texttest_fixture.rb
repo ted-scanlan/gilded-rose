@@ -13,7 +13,7 @@ items = [
   Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
   Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
   # This Conjured item does not work properly yet
-  Item.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
+  Item.new(name="Conjured", sell_in=3, quality=6), # <-- :O
 ]
 
 days = 2
@@ -29,5 +29,7 @@ gilded_rose = GildedRose.new items
     puts item
   end
   puts ""
-  # gilded_rose.update_quality
+  gilded_rose.update_quality
+  p "HMMMMMM"
+  p gilded_rose
 end
