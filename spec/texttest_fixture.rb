@@ -29,5 +29,5 @@ gilded_rose = GildedRose.new items
     puts item
   end
   puts ""
-  gilded_rose.update_quality
+  # gilded_rose.update_quality
 end

@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :name, :sell_in, :quality
+  attr_accessor :name, :sell_in, :quality, :update
 
   def initialize(name, sell_in, quality)
     @name = name
@@ -9,5 +9,9 @@ class Item
 
   def to_s()
     "#{@name}, #{@sell_in}, #{@quality}"
+  end
+
+  def update
+
   end
 end
