@@ -1,4 +1,4 @@
-require_relative '../lib/gilded_rose'
+require_relative '../../lib/gilded_rose'
 
 describe GildedRose do
 
@@ -13,13 +13,8 @@ describe GildedRose do
     Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=15, quality=20),
     Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
     Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
-
     Item.new(name="Conjured", sell_in=3, quality=6), # <-- :O
   ]
-
-
-
-
 
 
   gr = GildedRose.new(items)
@@ -34,8 +29,5 @@ describe GildedRose do
   expect(gr.items[7].quality).to be 50
   expect(gr.items[8].quality).to be 4
 
-
   end
-
-
 end

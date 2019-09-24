@@ -1,6 +1,6 @@
 require 'simplecov'
-require_relative './spec_helper.rb'
-require_relative '../lib/Normal_item.rb'
+require_relative '../spec_helper.rb'
+require_relative '../../lib/Normal_item.rb'
 
 describe NormalItem do
 

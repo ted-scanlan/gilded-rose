@@ -1,6 +1,6 @@
 require 'simplecov'
-require_relative './spec_helper.rb'
-require_relative '../lib/Sulfuras'
+require_relative '../spec_helper.rb'
+require_relative '../../lib/Sulfuras'
 
 
 describe Sulfuras do

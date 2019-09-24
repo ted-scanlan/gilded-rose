@@ -31,7 +31,7 @@ class GildedRose
 
 
   def update_quality
-     @items.map {|item|
+     @items.each {|item|
        item.update}
 
   end

@@ -1,6 +1,6 @@
 require 'simplecov'
-require_relative './spec_helper.rb'
-require_relative '../lib/Aged_brie.rb'
+require_relative '../spec_helper.rb'
+require_relative '../../lib/Aged_brie.rb'
 
 describe AgedBrie do
 

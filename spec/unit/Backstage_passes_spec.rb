@@ -1,6 +1,6 @@
 require 'simplecov'
-require_relative './spec_helper.rb'
-require_relative '../lib/Backstage_passes'
+require_relative '../spec_helper.rb'
+require_relative '../../lib/Backstage_passes'
 
 describe BackstagePasses do
 
